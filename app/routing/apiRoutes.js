@@ -19,18 +19,19 @@ module.exports = function (app) {
         var friendIndex = 0;
         for (let i = 0; i < friendData.length; i++) {
             debugger;
+            let currentFriendArray = friendData[i].scores;
             if (i === 0) {
                 friendIndex = i;
             }
             else{
-                if (compare(newFriend, friendData[i]) <  compare(newFriend, friendData[friendIndex])){
+                if (compare(newFriend.scores, currentFriendArray) <  compare(newFriend.scores, friendData[friendIndex].scores)){
                     friendIndex = i;
                 }
             }
             
         }
-        friendData.push(req.body);
-        res.json(friendData[friendIndex]);
+        friendData.push(newFriend);
+        res.send(friendData[friendIndex]);
 
     });
 
