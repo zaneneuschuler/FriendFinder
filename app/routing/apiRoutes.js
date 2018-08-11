@@ -10,7 +10,7 @@ module.exports = function (app) {
     });
 
     app.get("/api", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/api.html"));
+        res.redirect("/api/friends");
         console.log("/api requested");
     });
 

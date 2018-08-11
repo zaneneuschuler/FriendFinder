@@ -1,0 +1,18 @@
+.themeing{
+    border-style: double;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+body{
+    background-image: url("https://thumbs.gfycat.com/PeacefulIdleGalapagoshawk-size_restricted.gif")
+}
+
+.ok{
+    display: inline-block
+}
+.ok:link{
+    color: red;
+}
